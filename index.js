@@ -32,10 +32,14 @@ function buttonClicked(id){
             $("p").remove();
             $("h1").html("Press A Key to Start");
                
-            gamePattern = [];
-            userClickedPattern = [];
+            
         },3000);
         playSound("wrong"); 
+        level = 0;
+        gamePattern = [];
+        userClickedPattern = [];
+        clickedButtons = 0;
+        
         
     }
     else if(clickedButtons != gamePattern.length - 1){
@@ -72,7 +76,5 @@ function gameOver(){
     $("body").addClass("game-over");
     $("h1").html("<span style = 'color: black'> GAME OVER </span>");
     $("h1").after("<p> New game starts in 3 seconds... </p>");
-    level = 0;
 }
-
 
